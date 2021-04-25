@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{818375C4-AD8B-41E5-8F2F-D00B68926F05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlimeshChatViewer.Modules.ModuleName.Tests", "GlimeshChatViewer\Tests\GlimeshChatViewer.Modules.ModuleName.Tests\GlimeshChatViewer.Modules.ModuleName.Tests.csproj", "{CDE9C4A6-DA6B-46CF-BD8A-1237F28D60FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{3C743C56-FD96-479F-A12C-32D135F3414C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlimeshChatViewer.Modules.ModuleName", "GlimeshChatViewer\Modules\GlimeshChatViewer.Modules.ModuleName\GlimeshChatViewer.Modules.ModuleName.csproj", "{EE90E666-C117-468D-A5EB-0DC95488A263}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{8D1D4A93-6031-4765-8E7F-7DE9B6227806}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlimeshChatViewer.Services", "GlimeshChatViewer\Services\GlimeshChatViewer.Services\GlimeshChatViewer.Services.csproj", "{C88E21DE-63FA-4872-8F6C-D598A2BDCC91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlimeshChatViewer.Services.Interfaces", "GlimeshChatViewer\Services\GlimeshChatViewer.Services.Interfaces\GlimeshChatViewer.Services.Interfaces.csproj", "{D09594CC-00C9-4889-9189-20DC9E95467A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlimeshChatViewer", "GlimeshChatViewer\GlimeshChatViewer\GlimeshChatViewer.csproj", "{5913E51F-E8EF-4F94-A9EC-F13B8CFF8EF3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlimeshChatViewer.Core", "GlimeshChatViewer\GlimeshChatViewer.Core\GlimeshChatViewer.Core.csproj", "{C6071BC0-805E-4802-AD95-58D02FABFFE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlimeshChatViewer.Chat", "GlimeshChatViewer.Chat\GlimeshChatViewer.Chat.csproj", "{E651884C-5219-4813-8C0C-F834C20D6D9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDE9C4A6-DA6B-46CF-BD8A-1237F28D60FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDE9C4A6-DA6B-46CF-BD8A-1237F28D60FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDE9C4A6-DA6B-46CF-BD8A-1237F28D60FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDE9C4A6-DA6B-46CF-BD8A-1237F28D60FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE90E666-C117-468D-A5EB-0DC95488A263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE90E666-C117-468D-A5EB-0DC95488A263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE90E666-C117-468D-A5EB-0DC95488A263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE90E666-C117-468D-A5EB-0DC95488A263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C88E21DE-63FA-4872-8F6C-D598A2BDCC91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C88E21DE-63FA-4872-8F6C-D598A2BDCC91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C88E21DE-63FA-4872-8F6C-D598A2BDCC91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C88E21DE-63FA-4872-8F6C-D598A2BDCC91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D09594CC-00C9-4889-9189-20DC9E95467A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D09594CC-00C9-4889-9189-20DC9E95467A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D09594CC-00C9-4889-9189-20DC9E95467A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D09594CC-00C9-4889-9189-20DC9E95467A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5913E51F-E8EF-4F94-A9EC-F13B8CFF8EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5913E51F-E8EF-4F94-A9EC-F13B8CFF8EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5913E51F-E8EF-4F94-A9EC-F13B8CFF8EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5913E51F-E8EF-4F94-A9EC-F13B8CFF8EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6071BC0-805E-4802-AD95-58D02FABFFE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6071BC0-805E-4802-AD95-58D02FABFFE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6071BC0-805E-4802-AD95-58D02FABFFE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6071BC0-805E-4802-AD95-58D02FABFFE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E651884C-5219-4813-8C0C-F834C20D6D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E651884C-5219-4813-8C0C-F834C20D6D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E651884C-5219-4813-8C0C-F834C20D6D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E651884C-5219-4813-8C0C-F834C20D6D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CDE9C4A6-DA6B-46CF-BD8A-1237F28D60FF} = {818375C4-AD8B-41E5-8F2F-D00B68926F05}
+		{EE90E666-C117-468D-A5EB-0DC95488A263} = {3C743C56-FD96-479F-A12C-32D135F3414C}
+		{C88E21DE-63FA-4872-8F6C-D598A2BDCC91} = {8D1D4A93-6031-4765-8E7F-7DE9B6227806}
+		{D09594CC-00C9-4889-9189-20DC9E95467A} = {8D1D4A93-6031-4765-8E7F-7DE9B6227806}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A288224C-E00D-4B2C-9142-66A7BDD0C06E}
+	EndGlobalSection
+EndGlobal
