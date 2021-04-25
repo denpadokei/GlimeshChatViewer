@@ -8,4 +8,9 @@
     <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
     <PackageReference Include="StreamingClientLibrary.Glimesh" Version="1.0.0.8" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="IDs.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
