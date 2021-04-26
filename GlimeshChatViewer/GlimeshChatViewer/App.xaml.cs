@@ -1,9 +1,12 @@
-﻿using GlimeshChatViewer.Modules.ModuleName;
+﻿using GlimeshChatViewer.Chat;
+using GlimeshChatViewer.Core;
+using GlimeshChatViewer.Modules.ModuleName;
 using GlimeshChatViewer.Services;
 using GlimeshChatViewer.Services.Interfaces;
 using GlimeshChatViewer.Views;
 using Prism.Ioc;
 using Prism.Modularity;
+using Prism.Regions;
 using System.Windows;
 
 namespace GlimeshChatViewer
@@ -23,9 +26,17 @@ namespace GlimeshChatViewer
             containerRegistry.RegisterSingleton<IMessageService, MessageService>();
         }
 
+        protected override void Initialize()
+        {
+            base.Initialize();
+            var nav = this.Container.Resolve<IRegionManager>();
+            nav.RegisterViewWithRegion(RegionNames.MainChatView, typeof(MainChatView));
+        }
+
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             moduleCatalog.AddModule<ModuleNameModule>();
+            moduleCatalog.AddModule<ChatModule>();
         }
     }
 }

@@ -6,9 +6,12 @@
     <AssemblyName>GlimeshChatViewer</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.31" />
     <PackageReference Include="Prism.Unity" Version="8.0.0.1909" />
+    <PackageReference Include="StatefulModel.Standard" Version="0.1.0" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\GlimeshChatViewer.Chat\GlimeshChatViewer.Chat.csproj" />
     <ProjectReference Include="..\GlimeshChatViewer.Core\GlimeshChatViewer.Core.csproj" />
     <ProjectReference Include="..\Modules\GlimeshChatViewer.Modules.ModuleName\GlimeshChatViewer.Modules.ModuleName.csproj" />
     <ProjectReference Include="..\Services\GlimeshChatViewer.Services.Interfaces\GlimeshChatViewer.Services.Interfaces.csproj" />

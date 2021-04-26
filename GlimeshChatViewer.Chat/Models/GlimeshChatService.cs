@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace GlimeshChatViewer.Chat.Models
 {
@@ -53,6 +54,16 @@ namespace GlimeshChatViewer.Chat.Models
             if (!await this.chatEventClient.JoinChannelChat(this.channelModel.id) || !await this.chatEventClient.JoinChannelEvents(this.channelModel.id, this.userModel.id)) {
                 return;
             }
+            this.hartBeat.Start();
+        }
+
+        public async Task Stop()
+        {
+            if (this.chatEventClient == null) {
+                return;
+            }
+            await this.chatEventClient.Disconnect();
+            this.hartBeat.Stop();
         }
         #endregion
         //ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*
@@ -64,6 +75,13 @@ namespace GlimeshChatViewer.Chat.Models
         private void ChatEventClient_OnChatMessageReceived(object sender, Glimesh.Base.Models.Clients.Chat.ChatMessagePacketModel e)
         {
             this.OnChatRecived?.Invoke(this, new OnChatReciveEventArgs(e));
+        }
+
+        private async void HartBeat_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            this.hartBeat.Stop();
+            await this.chatEventClient?.SendHeartbeat();
+            this.hartBeat.Start();
         }
         #endregion
         //ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*ﾟ+｡｡+ﾟ*｡+ﾟ ﾟ+｡*
@@ -78,6 +96,7 @@ namespace GlimeshChatViewer.Chat.Models
         private UserModel userModel;
         private ChannelModel channelModel;
         private ChatEventClient chatEventClient;
+        private Timer hartBeat;
         private string clientId;
         private string secretKey;
         private bool disposedValue;
@@ -86,6 +105,9 @@ namespace GlimeshChatViewer.Chat.Models
         #region // 構築・破棄
         public GlimeshChatService()
         {
+            this.hartBeat = new Timer(30 * 1000);
+            this.hartBeat.Elapsed += this.HartBeat_Elapsed;
+
 #if DEBUG
             var path = Path.Combine(Directory.GetCurrentDirectory(), "IDs.json");
             if (File.Exists(path)) {
@@ -100,7 +122,6 @@ namespace GlimeshChatViewer.Chat.Models
             }
 #endif
         }
-
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue) {
