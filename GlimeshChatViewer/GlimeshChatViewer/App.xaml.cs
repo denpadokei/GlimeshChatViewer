@@ -24,6 +24,7 @@ namespace GlimeshChatViewer
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IMessageService, MessageService>();
+            containerRegistry.RegisterSingleton<IVoiceroid2Service, Voiceroid2Service>();
         }
 
         protected override void Initialize()
